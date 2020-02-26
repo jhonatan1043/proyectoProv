@@ -35,7 +35,11 @@ class UserController extends CI_Controller {
   public function listUsers(){
       $this->user->listUsers();
   }
-
+  
+   public function login()
+   {
+     
+   }
 
 
 }

@@ -16,7 +16,7 @@
 
     public function update($data)
     {
-     if(!$this->db->update('users',$data,array ('idUser'=>$data['idUser']))) {
+     if(!$this->db->update('users',$data,array('idUser'=>$data['idUser']))) {
             return false;
      }
     return true;
@@ -26,5 +26,12 @@
     {
         $query = $this->db->get('users', 10);
         return $query->result();
+    }
+
+    public function login($data)
+    {
+       $query = $this->db->get('users',
+                           array('identification'=>$data['identification'],
+                           'pass'=>$data['password']))
     }
  }
