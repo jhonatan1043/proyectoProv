@@ -20,9 +20,6 @@ class UserController extends CI_Controller {
          'pass' => $pass
      );
 
-     $result = $this->user->login($data)
-
+      $result = $this->user->login($data);
    }
-
-
 }

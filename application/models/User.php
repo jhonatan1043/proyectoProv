@@ -8,7 +8,7 @@
     
     public function login($data)
     {
-       $query = $this->db->get('users',
+    /*   $query = $this->db->get('users',
                            array('identification'=>$data['identification']))
                            
        $row = $query->row();
@@ -21,7 +21,6 @@
        else
        {
          return false;
-       }
-
+       };*/
     }
  }
