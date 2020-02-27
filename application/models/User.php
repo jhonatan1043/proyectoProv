@@ -5,33 +5,23 @@
     function __construct(){
         $this->load->database();
     }
-
-    public function create($data)
-    {
-     if(!$this->db->insert('users',$data)) {
-         return false;
-     }
-     return true;
-    }
-
-    public function update($data)
-    {
-     if(!$this->db->update('users',$data,array('idUser'=>$data['idUser']))) {
-            return false;
-     }
-    return true;
-    }
-
-    public function listUsers()
-    {
-        $query = $this->db->get('users', 10);
-        return $query->result();
-    }
-
+    
     public function login($data)
     {
        $query = $this->db->get('users',
-                           array('identification'=>$data['identification'],
-                           'pass'=>$data['password']))
+                           array('identification'=>$data['identification']))
+                           
+       $row = $query->row();
+
+       if($row->pass === $data['pass'])
+       {
+         $this->session->set_userdata($row->idUser);
+         return true;  
+       }
+       else
+       {
+         return false;
+       }
+
     }
  }
