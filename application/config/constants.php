@@ -83,3 +83,24 @@ defined('EXIT_USER_INPUT')     OR define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+/**++++++++++++++++++++++++++++++++++++++++++++ */
+define('ROL_ADMIN',1);
+define('ROL_USERS',2);
+/*+++++++++++++++++++++++++++++++++++++++++++++*/
+define('VIEW_DEFAULD',0);
+define('VIEW_PERFIL',1);
+define('VIEW_FORMULARIO',2);
+define('VIEW_LICENCIA',3);
+define('VIEW_FORMULARIO_PARTE2',4);
+/*+++++++++++++++++++++++++++++++++++++++++++++++++*/
+define('CODIGO_CLASIFICACION',4);
+define('CODIGO_ACTIVIDAD',5);
+define('CODIGO_ATTACHED',7);
+/*++++++++++++++++++++++++++++++++++++++++++++++++++*/
+define('SUCCESS',200);
+define('ERROR',400);
+/*++++++++++++++++++++++++++++++++++++++++++++++++++*/
+define('APPEXT',1);
+/*++++++++++++++++++++++++++++++++++++++++++++++++++*/
+define('CODIGO_CATEGORYS',9);
